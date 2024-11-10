@@ -1,0 +1,8 @@
+[package]
+name = "mower"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+i2c-linux = "0.1.2"
+vesc-api = "0.1.1"

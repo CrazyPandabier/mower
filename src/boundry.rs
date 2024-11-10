@@ -1,7 +1,6 @@
 use std::io;
 
 use ads1x1x::{
-    channel,
     ic::{Ads1115, Resolution16Bit},
     interface::I2cInterface,
     mode::OneShot,

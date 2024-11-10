@@ -71,7 +71,7 @@ impl BoundryInterface for BoundrySensor {
     fn detected(&mut self) -> Result<bool, Error<LinuxI2CError>> {
         if let Some(adc) = &mut self.adc {
             let measurement = block!(adc.read(self.channel))?;
-
+            println!("data: {}", measurement);
             if measurement > self.threshold {
                 return Ok(true);
             }

@@ -4,5 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-i2c-linux = "0.1.2"
+ads1x1x = "0.2.2"
+embedded-hal = "0.2.2"
+linux-embedded-hal = "0.3.0"
 vesc-api = "0.1.1"

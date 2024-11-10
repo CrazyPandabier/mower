@@ -6,7 +6,8 @@ mod mower;
 
 fn main() {
     let mut boundry = BoundrySensor::new();
-    let config = BoundryConfig::new("/dev/i2c-1", 0x00, 0);
+    let config =
+        BoundryConfig::new("/dev/i2c-1", 0).set_channel(ads1x1x::ChannelSelection::SingleA0);
     boundry.init(&config).unwrap();
 
     loop {

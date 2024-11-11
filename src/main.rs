@@ -19,8 +19,9 @@ fn main() {
         Box::new(boundry),
     );
 
-    let boundry_config =
-        BoundryConfig::new("/dev/i2c-1", 0).set_channel(ads1x1x::ChannelSelection::SingleA0);
+    let boundry_config = BoundryConfig::new("/dev/i2c-1", 900)
+        .set_channel_1(ads1x1x::ChannelSelection::SingleA0)
+        .set_channel_2(ads1x1x::ChannelSelection::SingleA1);
     let left_config = MotorConfig::new("/dev/ttyAMA2", Baud115200);
     let right_config = MotorConfig::new("/dev/ttyAMA3", Baud115200);
     let mow_config = MotorConfig::new("/dev/ttyAMA4", Baud115200);
